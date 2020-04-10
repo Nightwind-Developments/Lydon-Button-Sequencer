@@ -1228,23 +1228,31 @@ design rules under a new name.</description>
 <contactref element="KNOBBOARD" pad="14"/>
 <contactref element="PORTBOARD" pad="1"/>
 <contactref element="PORTBOARD" pad="2"/>
-<wire x1="70.41" y1="25.81" x2="58.42" y2="3.81" width="0" layer="19" extent="1-1"/>
-<wire x1="33.02" y1="19.05" x2="70.41" y2="25.81" width="0" layer="19" extent="1-1"/>
+<contactref element="BUTTONS" pad="2"/>
+<contactref element="GENERAL_XPN" pad="2"/>
+<wire x1="58.42" y1="3.81" x2="70.41" y2="25.81" width="0" layer="19" extent="1-1"/>
+<wire x1="33.02" y1="19.05" x2="58.42" y2="3.81" width="0" layer="19" extent="1-1"/>
 <wire x1="30.48" y1="19.05" x2="33.02" y2="19.05" width="0" layer="19" extent="1-1"/>
 <wire x1="3.81" y1="27.94" x2="30.48" y2="19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="59.69" x2="3.81" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="16.51" y1="59.69" x2="3.81" y2="59.69" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="X1" pad="2"/>
-<contactref element="U$1" pad="3V3"/>
 <contactref element="KNOBBOARD" pad="1"/>
 <contactref element="PORTBOARD" pad="24"/>
-<wire x1="70.41" y1="26.31" x2="58.42" y2="11.43" width="0" layer="19" extent="1-1"/>
-<wire x1="33.02" y1="3.81" x2="70.41" y2="26.31" width="0" layer="19" extent="1-1"/>
-<wire x1="39.37" y1="27.94" x2="70.41" y2="26.31" width="0" layer="19" extent="1-1"/>
+<contactref element="U$1" pad="3V3"/>
+<contactref element="BUTTONS" pad="1"/>
+<wire x1="58.42" y1="11.43" x2="70.41" y2="26.31" width="0" layer="19" extent="1-1"/>
+<wire x1="39.37" y1="27.94" x2="58.42" y2="11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="33.02" y1="3.81" x2="39.37" y2="27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="57.15" x2="39.37" y2="27.94" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+5V">
 <contactref element="U$1" pad="VIN"/>
 <contactref element="PORTBOARD" pad="23"/>
+<contactref element="GENERAL_XPN" pad="1"/>
+<wire x1="3.81" y1="43.18" x2="16.51" y2="57.15" width="0" layer="19" extent="1-1"/>
 <wire x1="30.48" y1="3.81" x2="3.81" y2="43.18" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCR_CS">
@@ -1313,47 +1321,93 @@ design rules under a new name.</description>
 <signal name="AUDIO_R">
 <contactref element="U$1" pad="A22/DAC1"/>
 <contactref element="AUDIO_MAIN" pad="3"/>
-<wire x1="5.08" y1="49.53" x2="41.91" y2="43.18" width="0" layer="19" extent="1-1"/>
+<contactref element="GENERAL_XPN" pad="6"/>
+<wire x1="21.59" y1="59.69" x2="41.91" y2="43.18" width="0" layer="19" extent="1-1"/>
+<wire x1="5.08" y1="49.53" x2="21.59" y2="59.69" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AUDIO_L">
 <contactref element="U$1" pad="21/DAC0"/>
 <contactref element="AUDIO_MAIN" pad="1"/>
-<wire x1="10.16" y1="49.53" x2="44.45" y2="43.18" width="0" layer="19" extent="1-1"/>
+<contactref element="GENERAL_XPN" pad="5"/>
+<wire x1="21.59" y1="57.15" x2="44.45" y2="43.18" width="0" layer="19" extent="1-1"/>
+<wire x1="10.16" y1="49.53" x2="21.59" y2="57.15" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="AUDIO_GND">
 <contactref element="U$1" pad="AGND"/>
 <contactref element="AUDIO_MAIN" pad="2"/>
 <wire x1="6.35" y1="43.18" x2="7.62" y2="49.53" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$3">
+<signal name="MIDIOUT1">
 <contactref element="PORTBOARD" pad="3"/>
 </signal>
-<signal name="N$4">
+<signal name="MIDIOUT2">
 <contactref element="PORTBOARD" pad="4"/>
 </signal>
-<signal name="N$5">
+<signal name="MIDIOUT3">
 <contactref element="PORTBOARD" pad="5"/>
 </signal>
-<signal name="N$6">
+<signal name="MIDIOUT4">
 <contactref element="PORTBOARD" pad="6"/>
 </signal>
-<signal name="N$7">
+<signal name="SDDATA0">
 <contactref element="PORTBOARD" pad="7"/>
 </signal>
-<signal name="N$8">
+<signal name="MIDIIN1">
 <contactref element="PORTBOARD" pad="22"/>
 </signal>
-<signal name="N$9">
+<signal name="MIDIIN2">
 <contactref element="PORTBOARD" pad="21"/>
 </signal>
-<signal name="N$10">
+<signal name="MIDIIN3">
 <contactref element="PORTBOARD" pad="20"/>
 </signal>
-<signal name="N$11">
+<signal name="MIDIIN4">
 <contactref element="PORTBOARD" pad="19"/>
 </signal>
-<signal name="N$12">
+<signal name="SDDATA1">
 <contactref element="PORTBOARD" pad="18"/>
+</signal>
+<signal name="SDDATA2">
+<contactref element="PORTBOARD" pad="8"/>
+</signal>
+<signal name="SDCLK">
+<contactref element="PORTBOARD" pad="9"/>
+</signal>
+<signal name="SDDATA3">
+<contactref element="PORTBOARD" pad="17"/>
+</signal>
+<signal name="SDCMD">
+<contactref element="PORTBOARD" pad="16"/>
+</signal>
+<signal name="LED_SDA">
+<contactref element="BUTTONS" pad="3"/>
+</signal>
+<signal name="BUTTON_S/P">
+<contactref element="BUTTONS" pad="5"/>
+</signal>
+<signal name="BUTTON_CLK">
+<contactref element="BUTTONS" pad="7"/>
+</signal>
+<signal name="LEDSCL">
+<contactref element="BUTTONS" pad="4"/>
+</signal>
+<signal name="BUTTON_DATA">
+<contactref element="BUTTONS" pad="6"/>
+</signal>
+<signal name="SPI_CS">
+<contactref element="GENERAL_XPN" pad="7"/>
+</signal>
+<signal name="SPI_CLK">
+<contactref element="GENERAL_XPN" pad="8"/>
+</signal>
+<signal name="SPI_MOSI">
+<contactref element="GENERAL_XPN" pad="9"/>
+</signal>
+<signal name="SPI_MISO">
+<contactref element="GENERAL_XPN" pad="10"/>
+</signal>
+<signal name="+12V">
+<contactref element="GENERAL_XPN" pad="3"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
