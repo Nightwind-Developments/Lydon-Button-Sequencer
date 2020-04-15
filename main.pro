@@ -1,0 +1,25 @@
+EAGLE AutoRouter Statistics:
+
+Job           : C:/Users/Daniel/projects/nightwind/Lydon-Button-Sequencer/main.brd
+
+Start at      : 17:22:09 (15/04/2020)
+End at        : 17:22:58 (15/04/2020)
+Elapsed time  : 00:00:48
+
+Signals       :    56   RoutingGrid: 6 mil  Layers: 2
+Connections   :    55   predefined:  7 ( 0 Vias )
+
+Router memory :   672512
+
+Passname          : TopRouter     Route Optimize1 Optimize2 Optimize3 Optimize4 Optimize5 Optimize6 Optimize7 Optimize8 Optimize9Optimize10Optimize11Optimize12
+
+Time per pass     :  00:00:31  00:00:02  00:00:01  00:00:01  00:00:02  00:00:01  00:00:01  00:00:02  00:00:01  00:00:01  00:00:01  00:00:02  00:00:01  00:00:01
+Number of Ripups  :         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+max. Level        :         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+max. Total        :         0         0         0         0         0         0         0         0         0         0         0         0         0         0
+
+Routed            :         0        48        48        48        48        48        48        48        48        48        48        48        48        48
+Vias              :         0        25        25        25        25        25        25        25        27        25        25        25        25        25
+Resolution        :    12.7 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
+
+Final             : 96.4% finished. Polygons may have fallen apart.

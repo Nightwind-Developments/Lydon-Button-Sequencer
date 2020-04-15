@@ -2265,7 +2265,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="+3V5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="KNOBBOARD" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X7" device="" package3d_urn="urn:adsk.eagle:package:22478/2"/>
@@ -2275,6 +2274,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="GENERAL_XPN" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X5" device="" package3d_urn="urn:adsk.eagle:package:22470/2"/>
 <part name="AGND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="AGND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
+<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2446,14 +2446,11 @@ a 22K resister may be needed</text>
 <instance part="GND5" gate="1" x="82.55" y="96.774" smashed="yes">
 <attribute name="VALUE" x="80.01" y="94.234" size="1.778" layer="96"/>
 </instance>
-<instance part="P+3" gate="1" x="204.47" y="41.91" smashed="yes">
-<attribute name="VALUE" x="207.01" y="41.91" size="1.778" layer="96" rot="R270"/>
+<instance part="P+3" gate="1" x="204.47" y="72.39" smashed="yes">
+<attribute name="VALUE" x="207.01" y="72.39" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="GND6" gate="1" x="227.33" y="20.574" smashed="yes">
-<attribute name="VALUE" x="224.79" y="18.034" size="1.778" layer="96"/>
-</instance>
-<instance part="P+4" gate="1" x="201.93" y="44.45" smashed="yes">
-<attribute name="VALUE" x="199.39" y="39.37" size="1.778" layer="96" rot="R90"/>
+<instance part="P+4" gate="1" x="201.93" y="74.93" smashed="yes">
+<attribute name="VALUE" x="199.39" y="69.85" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="P+5" gate="1" x="95.25" y="25.4" smashed="yes">
 <attribute name="VALUE" x="97.79" y="25.4" size="1.778" layer="96" rot="R270"/>
@@ -2474,15 +2471,18 @@ a 22K resister may be needed</text>
 <attribute name="NAME" x="66.04" y="112.395" size="1.778" layer="95"/>
 <attribute name="VALUE" x="66.04" y="96.52" size="1.778" layer="96"/>
 </instance>
-<instance part="GENERAL_XPN" gate="A" x="217.17" y="30.48" smashed="yes">
-<attribute name="NAME" x="210.82" y="38.735" size="1.778" layer="95"/>
-<attribute name="VALUE" x="210.82" y="20.32" size="1.778" layer="96"/>
+<instance part="GENERAL_XPN" gate="A" x="217.17" y="60.96" smashed="yes">
+<attribute name="NAME" x="210.82" y="69.215" size="1.778" layer="95"/>
+<attribute name="VALUE" x="210.82" y="50.8" size="1.778" layer="96"/>
 </instance>
 <instance part="AGND1" gate="VR1" x="214.63" y="90.17" smashed="yes">
 <attribute name="VALUE" x="218.44" y="88.9" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="AGND2" gate="VR1" x="62.23" y="13.97" smashed="yes">
 <attribute name="VALUE" x="66.04" y="12.7" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="GND6" gate="1" x="196.85" y="50.8" smashed="yes">
+<attribute name="VALUE" x="194.31" y="48.26" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -2514,12 +2514,6 @@ a 22K resister may be needed</text>
 <pinref part="BUTTONS" gate="A" pin="2"/>
 </segment>
 <segment>
-<wire x1="222.25" y1="35.56" x2="227.33" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="227.33" y1="23.114" x2="227.33" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="GENERAL_XPN" gate="A" pin="2"/>
-</segment>
-<segment>
 <wire x1="69.85" y1="48.26" x2="58.42" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="48.26" x2="49.53" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="49.53" y1="48.26" x2="49.53" y2="43.4330375" width="0.1524" layer="91"/>
@@ -2530,6 +2524,12 @@ a 22K resister may be needed</text>
 <junction x="58.42" y="48.26"/>
 <pinref part="PORTBOARD" gate="A" pin="1"/>
 <pinref part="PORTBOARD" gate="A" pin="3"/>
+</segment>
+<segment>
+<wire x1="214.63" y1="60.96" x2="196.85" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="196.85" y1="60.96" x2="196.85" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="GENERAL_XPN" gate="A" pin="5"/>
+<pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -2574,9 +2574,9 @@ a 22K resister may be needed</text>
 <wire x1="175.514" y1="86.36" x2="175.514" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="214.63" y1="35.56" x2="204.47" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="214.63" y1="66.04" x2="204.47" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
-<wire x1="204.47" y1="35.56" x2="204.47" y2="39.37" width="0.1524" layer="91"/>
+<wire x1="204.47" y1="66.04" x2="204.47" y2="69.85" width="0.1524" layer="91"/>
 <pinref part="GENERAL_XPN" gate="A" pin="1"/>
 </segment>
 <segment>
@@ -2802,14 +2802,14 @@ a 22K resister may be needed</text>
 <pinref part="AUDIO_MAIN" gate="A" pin="3"/>
 </segment>
 <segment>
-<wire x1="222.25" y1="30.48" x2="228.6" y2="30.48" width="0.1524" layer="91"/>
-<label x="228.6" y="30.48" size="1.27" layer="95" xref="yes"/>
-<pinref part="GENERAL_XPN" gate="A" pin="6"/>
-</segment>
-<segment>
 <pinref part="PORTBOARD" gate="A" pin="24"/>
 <wire x1="77.47" y1="20.32" x2="82.55" y2="20.32" width="0.1524" layer="91"/>
 <label x="82.55" y="20.32" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="GENERAL_XPN" gate="A" pin="9"/>
+<wire x1="214.63" y1="55.88" x2="208.28" y2="55.88" width="0.1524" layer="91"/>
+<label x="208.28" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="AUDIO_L" class="0">
@@ -2824,14 +2824,14 @@ a 22K resister may be needed</text>
 <pinref part="AUDIO_MAIN" gate="A" pin="1"/>
 </segment>
 <segment>
-<wire x1="214.63" y1="30.48" x2="209.55" y2="30.48" width="0.1524" layer="91"/>
-<label x="209.55" y="30.48" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="GENERAL_XPN" gate="A" pin="5"/>
-</segment>
-<segment>
 <pinref part="PORTBOARD" gate="A" pin="23"/>
 <wire x1="69.85" y1="20.32" x2="64.77" y2="20.32" width="0.1524" layer="91"/>
 <label x="64.77" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="GENERAL_XPN" gate="A" pin="7"/>
+<wire x1="214.63" y1="58.42" x2="208.28" y2="58.42" width="0.1524" layer="91"/>
+<label x="208.28" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MIDIOUT1" class="0">
@@ -3032,54 +3032,47 @@ a 22K resister may be needed</text>
 <label x="132.334" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="SPI_CS" class="0">
-<segment>
-<wire x1="214.63" y1="27.94" x2="209.55" y2="27.94" width="0.1524" layer="91"/>
-<label x="209.55" y="27.94" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="GENERAL_XPN" gate="A" pin="7"/>
-</segment>
-</net>
 <net name="SPI_CLK" class="0">
-<segment>
-<wire x1="222.25" y1="27.94" x2="228.6" y2="27.94" width="0.1524" layer="91"/>
-<label x="228.6" y="27.94" size="1.27" layer="95" xref="yes"/>
-<pinref part="GENERAL_XPN" gate="A" pin="8"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="20/A6"/>
 <wire x1="174.244" y1="71.12" x2="175.514" y2="71.12" width="0.1524" layer="91"/>
 <label x="175.26" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="GENERAL_XPN" gate="A" pin="2"/>
+<wire x1="222.25" y1="66.04" x2="228.6" y2="66.04" width="0.1524" layer="91"/>
+<label x="228.6" y="66.04" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SPI_MOSI" class="0">
-<segment>
-<wire x1="214.63" y1="25.4" x2="209.55" y2="25.4" width="0.1524" layer="91"/>
-<label x="209.55" y="25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="GENERAL_XPN" gate="A" pin="9"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="21/A7"/>
 <wire x1="174.244" y1="73.66" x2="175.514" y2="73.66" width="0.1524" layer="91"/>
 <label x="175.26" y="73.66" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="GENERAL_XPN" gate="A" pin="4"/>
+<wire x1="222.25" y1="63.5" x2="228.6" y2="63.5" width="0.1524" layer="91"/>
+<label x="228.6" y="63.5" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SPI_MISO" class="0">
-<segment>
-<wire x1="222.25" y1="25.4" x2="228.6" y2="25.4" width="0.1524" layer="91"/>
-<label x="228.6" y="25.4" size="1.27" layer="95" xref="yes"/>
-<pinref part="GENERAL_XPN" gate="A" pin="10"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="5"/>
 <wire x1="133.604" y1="71.12" x2="132.334" y2="71.12" width="0.1524" layer="91"/>
 <label x="132.08" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="GENERAL_XPN" gate="A" pin="6"/>
+<wire x1="222.25" y1="60.96" x2="228.6" y2="60.96" width="0.1524" layer="91"/>
+<label x="228.6" y="60.96" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="+12V" class="0">
 <segment>
 <pinref part="P+4" gate="1" pin="+12V"/>
-<wire x1="214.63" y1="33.02" x2="201.93" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="201.93" y1="33.02" x2="201.93" y2="41.91" width="0.1524" layer="91"/>
+<wire x1="214.63" y1="63.5" x2="201.93" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="201.93" y1="63.5" x2="201.93" y2="72.39" width="0.1524" layer="91"/>
 <pinref part="GENERAL_XPN" gate="A" pin="3"/>
 </segment>
 <segment>
@@ -3167,6 +3160,13 @@ a 22K resister may be needed</text>
 <pinref part="AGND2" gate="VR1" pin="AGND"/>
 <wire x1="69.85" y1="17.78" x2="62.23" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="62.23" y1="17.78" x2="62.23" y2="16.51" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SPI_CS" class="0">
+<segment>
+<pinref part="GENERAL_XPN" gate="A" pin="8"/>
+<wire x1="222.25" y1="58.42" x2="228.6" y2="58.42" width="0.1524" layer="91"/>
+<label x="228.6" y="58.42" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
