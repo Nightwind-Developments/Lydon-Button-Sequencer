@@ -21802,6 +21802,8 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="XPN8" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X6" device="" package3d_urn="urn:adsk.eagle:package:22474/2"/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="USBPIN+" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
+<part name="USBPIN-" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -22488,6 +22490,14 @@ pins can be used as SPI chip select pins</text>
 </instance>
 <instance part="GND16" gate="1" x="104.14" y="157.48" smashed="yes">
 <attribute name="VALUE" x="101.6" y="154.94" size="1.778" layer="96"/>
+</instance>
+<instance part="USBPIN+" gate="P" x="332.74" y="213.36" smashed="yes" rot="MR0">
+<attribute name="NAME" x="333.883" y="215.2142" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="333.883" y="210.058" size="1.778" layer="96" rot="MR0"/>
+</instance>
+<instance part="USBPIN-" gate="P" x="332.74" y="210.82" smashed="yes" rot="R180">
+<attribute name="NAME" x="333.883" y="208.9658" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="333.883" y="214.122" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -24029,9 +24039,9 @@ pins can be used as SPI chip select pins</text>
 <pinref part="PORTBOARD" gate="A" pin="13"/>
 </segment>
 <segment>
-<pinref part="TEENSY_3.6" gate="G$1" pin="UD+"/>
-<wire x1="331.724" y1="205.74" x2="331.724" y2="207.01" width="0.1524" layer="91"/>
-<label x="331.724" y="207.01" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="USBPIN+" gate="P" pin="P"/>
+<wire x1="330.2" y1="213.36" x2="327.66" y2="213.36" width="0.1524" layer="91"/>
+<label x="327.66" y="213.36" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="USBDATA-" class="0">
@@ -24041,9 +24051,9 @@ pins can be used as SPI chip select pins</text>
 <pinref part="PORTBOARD" gate="A" pin="14"/>
 </segment>
 <segment>
-<pinref part="TEENSY_3.6" gate="G$1" pin="UD-"/>
-<wire x1="329.184" y1="205.74" x2="329.184" y2="207.01" width="0.1524" layer="91"/>
-<label x="329.184" y="207.01" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="USBPIN-" gate="P" pin="P"/>
+<wire x1="330.2" y1="210.82" x2="327.66" y2="210.82" width="0.1524" layer="91"/>
+<label x="327.66" y="210.82" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="XPN_CS1" class="0">
